@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   const [active, setActive] = useState("home");
   return (
-    <div className="navbar flex flex-col backdrop-blur-sm shadow-lg shadow-black/10">
-      <div className="nav-top flex items-center justify-between border border-b border-black/10 px-[4rem] py-[1rem]">
+    <div className="navbar flex flex-col bg-white bg-opacity-95 backdrop-blur-sm shadow-lg shadow-black/10 fixed top-0 left-0 right-0 z-50">
+      <div className="nav-top flex items-center justify-between border border-b border-black/10 px-[2rem] md:px-[4rem] py-[1rem]">
         <div className="left-nav flex items-center gap-3">
-          <Link to="/">
+          <Link className="flex items-center gap-2" to="/">
             <img width={30} height={30} src="/logo.svg" alt="logo" />
+            <span className="text-[#3bc944] text-[1.5rem] font-bold">
+              Green World
+            </span>
           </Link>
-          <span className="text-[#3bc944] text-[1.5rem] font-bold">
-            Green World
-          </span>
         </div>
         <div className="flex items-center gap-4">
           <button
@@ -29,7 +29,7 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-      <div className="nav-bottom flex items-center justify-start px-[4rem] py-[1rem] gap-5">
+      <div className="nav-bottom flex items-center justify-start px-[2rem] md:px-[4rem] py-[1rem] gap-5">
         <Link
           to="/"
           onClick={() => setActive("home")}
